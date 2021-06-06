@@ -5,7 +5,7 @@ commands:
   print_pipeline_id:
     description: print pipeline id
     steps:
-      - run: cat $CIRCLE_WORKFLOW_ID
+      - run: cat ${CIRCLE_WORKFLOW_ID}
 jobs:
   save_hello_world_output:
     docker:
