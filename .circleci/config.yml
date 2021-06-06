@@ -29,9 +29,9 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      -checkout
+      - checkout
       - run:
-          name: print name:
+          name: print name
           command: |
             echo $NAME
 # Orchestrate or schedule a set of jobs
