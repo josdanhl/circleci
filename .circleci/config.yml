@@ -10,9 +10,9 @@ jobs:
     steps:
       - checkout
       - run:
-        name: print Hello
-        command: |
-          echo $WORD1
+          name: print Hello
+          command: |
+            echo $WORD1
 
   print_world:
     environment:
@@ -22,9 +22,9 @@ jobs:
     steps:
       - checkout
       - run:
-        name: print World
-        command: |
-          echo $WORD2
+          name: print World
+          command: |
+            echo $WORD2
           
 # Orchestrate or schedule a set of jobs
 workflows:
