@@ -25,7 +25,15 @@ jobs:
           name: print World
           command: |
             echo $WORD2
-          
+  print_name:
+    docker:
+      - image: circleci/node:13.8.0
+     steps:
+      -checkout
+      - run:
+          name: print name:
+          command: |
+            echo $NAME
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
