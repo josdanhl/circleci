@@ -7,6 +7,19 @@ commands:
     steps:
       - run: echo ${CIRCLE_WORKFLOW_ID}
 jobs:
+  inventory_file:
+    docker:
+      - image: amazon/aw-cli
+    steps:
+      - run:
+          name: inventory ec2 all
+          command: |
+            echo "[all]" > inventory
+            aws ec2 describe-instances --query 'Reservations[*].Instances[*].PublicIpAddress' --output text >> inventory
+      - persist_to_workspace:
+          root: ~/
+          paths:
+              - inventory
   save_hello_world_output:
     docker:
       - image: circleci/node:13.8.0
