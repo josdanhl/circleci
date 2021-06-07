@@ -57,4 +57,4 @@ workflows:
       - print_output_file:
           requires:
               - save_hello_world_output
-      - fail
+      - print_pipeline_id
