@@ -9,7 +9,7 @@ commands:
 jobs:
   inventory_file:
     docker:
-      - image: amazon/aw-cli
+      - image: amazon/aws-cli
     steps:
       - run:
           name: inventory ec2 all
